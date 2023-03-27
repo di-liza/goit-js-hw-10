@@ -38,8 +38,12 @@ function onSearchBoxInput(e) {
           'Too many matches found. Please enter a more specific name.'
         );
         return;
+      } else {
+        Notify.info(
+          'find something'
+        );
       }
-      generateMarkup(countriesArray, countryList, countryBox);
+      // generateMarkup(countriesArray, countryList, countryBox);
     })
     .catch(err => {
       Notify.failure('Oops, there is no country with that name');
@@ -51,11 +55,9 @@ function onSearchBoxInput(e) {
 function generateMarkup(countriesArray, countryList, countryBox) {
   if (countriesArray.length >= 2 && countriesArray.length <= 10) {
     countryBox.classList.remove('hidden');
-    const listMarkup = countryListTemplate(countriesArray);
-    countryList.innerHTML = listMarkup;
+    countryList.innerHTML = countryListTemplate(countriesArray);
     countryBox.classList.add('hidden');
-    return;
-  } else if (countriesArray.length === 1) {
+  } else {
     countryBox.classList.remove('hidden');
     countryList.innerHTML = '';
     changeCountryLang(selectedCountry);
@@ -69,8 +71,7 @@ function changeCountryLang(country) {
 }
 
 function renderCountryCard(country) {
-  const markupCountryCard = countryCardTemplate(country);
-  countryBox.innerHTML = markupCountryCard;
+  countryBox.innerHTML = countryCardTemplate(country);
 }
 function cleanMarkup(countryBox, countryList) {
   countryList.innerHTML = '';
