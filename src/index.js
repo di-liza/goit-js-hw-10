@@ -38,12 +38,8 @@ function onSearchBoxInput(e) {
           'Too many matches found. Please enter a more specific name.'
         );
         return;
-      } else {
-        Notify.info(
-          'find something'
-        );
-      }
-      // generateMarkup(countriesArray, countryList, countryBox);
+      } 
+      generateMarkup(countriesArray, countryList, countryBox);
     })
     .catch(err => {
       Notify.failure('Oops, there is no country with that name');
