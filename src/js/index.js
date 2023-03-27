@@ -43,7 +43,6 @@ function generateMarkup(countriesArray, countryList, countryBox) {
     Notify.info('Too many matches found. Please enter a more specific name.');
     return;
   } else if (countriesArray.length >= 2 && countriesArray.length <= 10) {
-    countryBox.classList.remove('hidden');
     countryList.innerHTML = makeCountryListMarkup(countriesArray);
     countryBox.classList.add('hidden');
   } else {

@@ -19,7 +19,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   line-height: 1.5;
-  padding-top: 195px;
 }
 
 #search-box {
@@ -86,7 +85,7 @@ ul {
   align-items: center;
   color: #fff;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 1.2rem;
 }
 
 .flag {
@@ -104,11 +103,11 @@ ul {
 .population,
 .languages-box p {
   color: #fff;
-  font-size: 25px;
+  font-size: 19px;
 }
 span {
   color: #eaffb8;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
 }
 .languages-box p {
@@ -125,7 +124,7 @@ span {
 
 .country-info {
   color: #fff;
-  width: 623px;
+  width: 498px;
   background: linear-gradient(90deg, #2ecef973 0.5% 25%, #7ab6 100%);
   border: 1.16px solid #fff;
   border-radius: 5px;
