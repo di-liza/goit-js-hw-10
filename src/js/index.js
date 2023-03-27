@@ -33,7 +33,6 @@ function onSearchBoxInput(e) {
       generateMarkup(countriesArray, countryList, countryBox);
     })
     .catch(err => {
-      console.log(err, err.stack);
       Notify.failure('Oops, there is no country with that name');
       countryBox.classList.add('hidden');
       cleanMarkup(countryBox, countryList);
@@ -50,7 +49,6 @@ function generateMarkup(countriesArray, countryList, countryBox) {
   } else {
     countryBox.classList.remove('hidden');
     countryList.innerHTML = '';
-    console.log(selectedCountry);
     renderCountryCard(selectedCountry);
   }
 }
