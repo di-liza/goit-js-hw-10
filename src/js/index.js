@@ -17,7 +17,6 @@ searchBox.addEventListener('input', debounce(onSearchBoxInput, DEBOUNCE_DELAY));
 function onSearchBoxInput(e) {
   const countryName = e.target.value.trim();
   const countriesArray = [];
-
   if (!countryName) {
     cleanMarkup();
     return;
@@ -38,7 +37,6 @@ function onSearchBoxInput(e) {
 function generateMarkup(countriesArray) {
   if (countriesArray.length > 10) {
     Notify.info('Too many matches found. Please enter a more specific name.');
-    return;
   } else if (countriesArray.length >= 2 && countriesArray.length <= 10) {
     countryList.innerHTML = makeCountryListMarkup(countriesArray);
     countryBox.classList.add('hidden');

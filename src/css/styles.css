@@ -19,6 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   line-height: 1.5;
+  padding-top: 20px;
 }
 
 #search-box {
